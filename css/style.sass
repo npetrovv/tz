@@ -1,0 +1,311 @@
+@import "fonts"
+@import "media"
+
+
+body
+	font-family: PoppinsRegular, sans-serif
+	background-image: url(../images/fon.png)
+	background-size: cover
+	width: 100%
+	height: 100%
+
+::-webkit-scrollbar
+	display: none
+
+
+.wrapper
+	height: 100%
+
+.head
+	background-color: transparent
+	height: 80px
+	padding-top: 80px
+
+.header
+	display: flex
+	align-items: center 
+
+
+	.header-mnu
+		font-size: 18px
+		display: flex
+		li 
+			display: inline-block
+			padding: 0 10px
+		a
+			color: #000
+			text-decoration: none
+			transition: color .25s ease
+			&:hover
+				color: #5271f3
+			i
+				padding: 0 5px
+
+	.header-mnu-right
+		display: flex
+		justify-content: flex-end
+		.header-login
+			padding: 0 10px
+			a
+				background-color: #fff
+				text-decoration: none
+				color: #000
+				padding: 10px 20px
+				border-radius: 28px
+				box-shadow: 0px 0px 10px #0000001A
+				transition: all .25s ease
+				&:hover
+					box-shadow: 0px 0px 10px #007DFB
+
+		.header-select-lang
+			padding: 0 10px
+			ul
+				display: none
+			&:hover
+				ul
+					display: block
+					position: absolute
+					list-style-type: none
+					padding: 0
+					background-color: #999
+					padding: 20px
+					border-radius: 42px
+					max-height: 300px
+					overflow-y: scroll
+					li
+						a
+							text-decoration: none
+							color: #fff
+							i
+								padding: 0 20px
+								opacity: 0.1
+						&:hover
+							i
+								opacity: 0.9
+
+		.header-search
+			padding: 0 10px
+			a
+				color: #000
+			&:focus-within
+				.header-search-form
+					display: flex
+					position: absolute
+					right: 10%
+					margin-top: 30px
+					align-items: center
+					justify-content: flex-end
+					i
+						position: absolute
+						padding: 0 10px
+					.uk-search-input
+						outline: none
+						padding: 10px
+						border-radius: 42px
+						border: 1px #007DFB solid
+						box-shadow: 0px 0px 10px #007DFB
+						transition: box-shadow .25s ease
+						&:focus
+							box-shadow: 0px 0px 0px
+
+
+		.header-search-form
+			display: none
+
+.header-mnu-dropdown
+	&:focus-within
+		.header-mnu-dropdown-item
+			display: flex
+
+.header-mnu-dropdown-item
+	display: none
+	position: absolute
+	background-color: rgba(255,255,255, 0.9)
+	backdrop-filter: blur(15px)
+	padding: 0
+	margin-top: 20px
+	border-radius: 42px
+	padding: 35px
+	left: 27%
+	width: 800px
+	li
+		padding: 10px 15px !important
+	a
+		font-size: 20px
+		padding: 10px 0
+		i
+			font-size: 14px
+	p
+		margin-top: 10px
+
+.btn-header
+	background: transparent
+	border: 0
+	i
+		font-size: 14px
+	&:focus-within
+		color: #5271f3
+		i
+			transform: rotate(180deg)
+	&:focus
+		outline: none
+
+.header-select-lang-item
+	background-color: transparent
+	border: none
+
+
+.header-menu-mobile
+	text-align: right
+	font-size: 25px
+	right: 0
+	padding: 0 20px
+	position: absolute
+	z-index: 10
+
+.active
+	display: block !important
+	position: relative
+	.header
+		background-color: rgba(255,255,255, 0.8)
+		backdrop-filter: blur(15px)
+		padding: 5px 30px 30px
+	.header-mnu
+		flex-direction: column
+		display: flex
+		padding: 0
+		z-index: 99
+		li
+			padding: 0
+			a
+				font-size: 20px
+			.btn-header
+				font-size: 20px
+				padding: 0
+	.header-mnu-right
+		justify-content: space-between
+		margin-top: 250px
+		.btn-header
+			padding: 0
+	.header-mnu-dropdown-item
+		left: 0
+		flex-direction: column
+		margin-top: 0
+		padding: 0 50px
+		background: none
+		backdrop-filter: blur(0px)
+		li
+			padding: 0 !important
+			font-size: 16px
+			a
+				font-size: 14px
+
+		.header-mnu-dropdown-item-1, .header-mnu-dropdown-item-2
+			flex-direction: column
+			display: flex
+		p
+			display: none 
+
+//top text
+
+.top
+	.top-text
+		margin-top: 155px
+		text-align: center
+		h1
+			font-family: PoppinsBold, sans-serif
+			font-weight: 900 
+			font-size: 96px
+			color: #000
+		p
+			color: #007dfb
+			font-size: 18px
+			margin-top: 37px
+
+.top-button
+	text-align: center
+	margin-top: 125px
+	position: relative
+	left: 18%
+	.btn-top
+		background-color: #007DFB
+		border: none
+		width: 180px
+		height: 75px
+		border-radius: 62px
+
+		&:active
+			outline: none
+		a
+			text-decoration: none
+			color: #fff
+			font-size: 18px
+			i
+				font-size: 14px
+				padding: 0 5px
+
+.test-form-st
+	height: 100%
+.test-form-bg
+	height: 100%
+	width: 100%
+	position: absolute
+	&:after
+		content: ''
+		border-top-left-radius: 50% 100%
+		border-top-right-radius: 50% 100%
+		position: absolute
+		bottom: 0
+		z-index: -1
+		width: 100%
+		background-color: #0f0f10
+		height: 85%
+.mfp-bg
+	background: transparent !important
+.mfp-container
+	padding: 0 !important
+	height: 100%
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content
+	height: 100% !important
+.test-form-bg-text
+	width: 100%
+	height: 100%
+	position: relative
+	top: 5%
+	left: 20%
+	padding: 20px
+	h2
+		margin-top: 77px
+
+.test-form-bg-text-btn
+	.btn-form
+		background-color: #007DFB
+		border: none
+		width: 180px
+		height: 75px
+		border-radius: 62px
+		margin-top: 65px
+		&:active
+			outline: none
+		a
+			text-decoration: none
+			color: #fff
+			font-size: 18px
+
+.form-ctrl
+	background-color: #F3F4F6 !important
+	border: 0 !important
+	border-radius: 52px !important
+	padding: 10px 48px
+	margin-top: 20px
+	height: 80px
+	width: 640px
+	font-size: 25px
+	display: flex
+
+.mfp-wrap .mfp-close-btn-in .mfp-auto-cursor .mfp-zoom-in .mfp-ready
+	top: 0 !important
+
+.mfp-close-btn-in .mfp-close
+	color: #007DFB !important
+
